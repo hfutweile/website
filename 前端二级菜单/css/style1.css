@@ -1,0 +1,278 @@
+:root{
+    --oTop:500px;
+    --oLeft:500px;
+    --Radius:50%;
+    --csize:600px;
+    navsize:100px
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a,img{border:0;}
+
+/*二级选择菜单样式*/
+#selectframe {
+    position: fixed;
+    top: 900px;
+    left: 250px;
+    width: 200px;
+    height: 200px;
+    transform:rotate(-125deg);
+    border-radius: 50%;
+}
+#sfirst{
+    position: fixed;
+    top: 500px;
+    left: 350px;
+}
+#ssecond{
+    position: fixed;
+    top: 625px;
+    left: 300px;
+}
+#sthird{
+    position: fixed;
+    top: 750px;
+    left: 280px;
+}
+#sfourth{
+    position: fixed;
+    top: 890px;
+    left: 270px;
+}
+#sfifth{
+    position: fixed;
+    top: 1030px;
+    left: 320px;
+}
+
+/*二级菜单连接样式*/
+#linkframe {
+    position: fixed;
+    top: 700px;
+    left: 200px;
+    width: 200px;
+    height: 200px;
+    transform:rotate(-100deg);
+    border-radius: 50%;
+}
+#lfirst{
+    position: fixed;
+    top: 290px;
+    left: 650px;
+}
+#lsecond{
+    position: fixed;
+    top: 340px;
+    left: 530px;
+}
+#lthird{
+    position: fixed;
+    top: 440px;
+    left: 400px;
+}
+#lfourth{
+    position: fixed;
+    top: 530px;
+    left: 330px;
+}
+#lfifth{
+    position: fixed;
+    top: 690px;
+    left: 290px;
+}
+#lsixth{
+    position: fixed;
+    top: 800px;
+    left: 280px;
+}
+/*二级菜单样式结束*/
+
+#image {
+    width: var(--csize);
+    height: var(--csize);
+    border-radius: 50%;
+    position: fixed;
+    top:500px;
+    left: 500px;
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+    z-index: 1;
+}
+#homebutton {
+    width: var(--csize);
+    height: var(--csize);
+    border-radius: 50%;
+    position: fixed;
+    top: 675px;
+    left: 685px;
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#nav {
+    width: var(--csize);
+    height: var(--csize);
+    border-radius: 50%;
+    position: fixed;
+    top: var(--oTop);
+    left: var(--oLeft);
+    cursor: pointer;
+    z-index: 15;
+}
+
+#group {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:0px;
+    top: 275px;
+    opacity: 1;
+    transform:rotate(-45deg);
+    z-index: 1500;
+}
+
+#select {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:0px;
+    top: 300px;
+    opacity: 1;
+    /*transform:rotate(0deg);*/
+    z-index: 1500;
+}
+
+#link {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:75px;
+    top:75px;
+    opacity: 1;
+    transform:rotate(45deg);
+    transform-origin:0% 0%;
+    z-index: 1500;
+}
+#search {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:300px;
+    top: -60px;
+    opacity: 1;
+    transform:rotate(0deg);
+    transform-origin:0% 0%;
+    z-index: 1500;
+}
+#lookup {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:475px;
+    top: 25px;
+    opacity: 1;
+    transform:rotate(-45deg);
+    transform-origin:0% 0%;
+    z-index: 1500;
+}
+#dispel {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:550px;
+    top: 150px;
+    opacity: 1;
+    /*transform:rotate(0deg);*/
+    z-index: 1500;
+}
+#remove {
+    position:relative;
+    width: var(--navsize);
+    height: var(--navsize);
+    border-radius: 50%;
+    left:475px;
+    top: 250px;
+    opacity: 1;
+    transform:rotate(45deg);
+    transform-origin:0% 0%;
+    z-index: 1500;
+}
+
+#out{
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	right:250px;
+	bottom: 250px;
+    border-radius: 50%;
+    background-color: rgb(97,207,249);
+    opacity: 0.6;
+}
+ #first {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    opacity: 1;
+    transform:rotate(0deg);
+}
+#second {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    transform:rotate(15deg);
+    opacity: 1;
+}
+#third {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    transform:rotate(30deg);
+    opacity: 1;
+}
+
+#fourth {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    transform:rotate(45deg);
+    opacity: 1;
+}
+#fifth {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    transform:rotate(60deg);
+    opacity: 1;
+}
+six {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 100px;
+    top: 100px;
+    transform:rotate(75deg);
+    opacity: 1;
+
+} /**/

@@ -1,0 +1,96 @@
+﻿//屏蔽浏览器默认右键功能，以及在空白处单击右键，隐藏菜单
+//
+$('html').on('contextmenu', function(){return false;}).click(function(){
+	$('.popup_menu').hide();
+});
+
+
+
+//得到鼠标右击的位置坐标
+//
+function getMousePos(event) {
+	var e = event || window.event;
+	return [e.clientX, e.clientY];
+}
+
+
+
+// echart 的 node 右键单击事件，放在 myChart.setOption(option); 之后，同一级
+//
+myChart.on('contextmenu', function(params){
+	var [mousePosX, mousePosY] = getMousePos();
+	var popmenu = kyoPopupMenu.sys();
+	popmenu.css({left: mousePosX, top: mousePosY}).show();
+});
+
+
+
+//右键菜单
+//
+var kyoPopupMenu = {};
+kyoPopupMenu = (function(){
+	return {
+		sys: function (obj) {
+			$('.popup_menu').remove();
+			popupMenuApp = $(
+				'<div class="popup_menu app-menu">' +
+					'<ul>' +
+						'<li>' +
+							'<a menu="choose">选择</a>' +
+						'</li>' +
+						'<li>' +
+							'<a menu="link">连接</a>' +
+						'</li>' +
+					'</ul>' +
+				'</div>'
+			).appendTo('body');
+			
+			//菜单中各选项的绑定事件
+			$('.app-menu a[menu="choose"]').on('click', function(){
+				alert("选择");
+			});
+			$('.app-menu a[menu="link"]').on('click', function(){
+				alert("连接");
+			});
+			
+		}
+	}
+});
+
+
+
+//右键菜单的css
+body {
+	position: relative;
+}
+.popup_menu ul, .popup_menu ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 18px;
+}
+.popup_menu ul li:hover {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 18px;
+	backgroud: #57B4E4;
+	cursor: pointer;
+}
+.popup_menu {
+	position: absolute;
+	z-index: 90;
+	boeder: 1px solid #AEAEAE;
+	padding: 2px;
+	width: 130px;
+	backgroud: #ffffff;
+}
+.popup_menu a {
+	display: block;
+	color: #325B8E;
+	text-indent: 12px;
+	text-decoration: none;
+	height: 26px;
+	line-height: 25px;
+	padding-right: 5px;
+}
